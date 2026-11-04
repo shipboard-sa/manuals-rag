@@ -1,0 +1,11 @@
+# Purpose: pinned Python deps for manuals-rag (extraction, OCR, index, Q&A service).
+# Version: v2 (2026-10-03) - v2: sqlite-vec (index), fastapi + uvicorn (rag/app.py) for the Ship's PC build (D-054).
+#   v1 (2026-09-30): pymupdf only.
+# Scope: PRODUCTION-candidate - the Ship's PC venv (E:\boat\manuals-rag\.venv, Python 3.14).
+# Architecture: extract\extract_corpus.py + ocr_corpus.py (pymupdf; OCR also needs Tesseract 5 installed),
+#   rag\ingest.py (sqlite-vec), rag\app.py (fastapi/uvicorn). Ollama is a separate program, not a Python dep.
+# Invocation: py -3.14 -m venv .venv ; .venv\Scripts\python -m pip install -r requirements.txt
+pymupdf==1.28.2
+sqlite-vec==0.1.9
+fastapi==0.141.1
+uvicorn[standard]==0.52.4

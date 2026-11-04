@@ -1,0 +1,10 @@
+# Purpose: git ignore rules for manuals-rag. Version: v1 (2026-09-30)
+# Scope: PRODUCTION-candidate (manuals-rag). Architecture: keeps derived corpus + venv out of git.
+# Invocation: n/a (read by git once this folder becomes a repo)
+# corpus/ = text DERIVED from copyrighted manuals: local only, never committed, published or pushed.
+corpus/
+# index/ = the vector index built FROM the corpus (rag/ingest.py) - same rule: local only, never pushed.
+index/
+.venv/
+__pycache__/
+*.pyc
